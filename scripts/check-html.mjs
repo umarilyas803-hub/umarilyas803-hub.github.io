@@ -16,11 +16,12 @@ ok((html.match(/<img\b/gi) || []).length === 1, "only the hero portrait is an im
 ok(/fetchpriority=["']high["']/.test(html), "hero portrait has high fetch priority");
 ok(!/href=["']#["']/.test(html), "no empty placeholder links remain");
 
-const ids = [...html.matchAll(/\bid=["']([^"']+)["']/gi)].map((m) => m[1]);
+const markup = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+const ids = [...markup.matchAll(/\bid=["']([^"']+)["']/gi)].map((m) => m[1]);
 const duplicates = ids.filter((id, i) => ids.indexOf(id) !== i);
 ok(duplicates.length === 0, duplicates.length ? `duplicate IDs: ${[...new Set(duplicates)].join(", ")}` : "element IDs are unique");
 const idSet = new Set(ids);
-const missingAnchors = [...html.matchAll(/href=["']#([^"'\s]+)["']/gi)].map((m) => m[1]).filter((id) => !idSet.has(id));
+const missingAnchors = [...markup.matchAll(/href=["']#([^"'\s]+)["']/gi)].map((m) => m[1]).filter((id) => !idSet.has(id));
 ok(missingAnchors.length === 0, missingAnchors.length ? `missing anchor targets: ${[...new Set(missingAnchors)].join(", ")}` : "all in-page links have a target");
 
 for (const match of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/gi)) {
