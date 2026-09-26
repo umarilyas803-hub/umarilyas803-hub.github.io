@@ -25,7 +25,7 @@ const idSet = new Set(ids);
 const missingAnchors = [...markup.matchAll(/href=["']#([^"'\s]+)["']/gi)].map((m) => m[1]).filter((id) => !idSet.has(id));
 ok(missingAnchors.length === 0, missingAnchors.length ? `missing anchor targets: ${[...new Set(missingAnchors)].join(", ")}` : "all in-page links have a target");
 
-const csp = html.match(/<meta http-equiv=["']Content-Security-Policy["'] content=["']([^"']*)["']/i)?.[1] ?? "";
+const csp = html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]*)"/i)?.[1] ?? "";
 const executableScripts = [...html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/gi)].filter((m) => !/type=["']application\/ld\+json["']/i.test(m[1]) && !/src=/i.test(m[1]));
 ok(executableScripts.every((m) => csp.includes(`'sha256-${createHash("sha256").update(m[2]).digest("base64")}'`)), "CSP hash matches every inline executable script");
 
