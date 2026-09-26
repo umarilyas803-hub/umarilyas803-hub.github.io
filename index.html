@@ -41,7 +41,13 @@
 
     .menu-toggle{display:none;width:40px;height:38px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:9px;place-content:center;gap:4px;cursor:pointer}.menu-toggle span{display:block;width:15px;height:1.5px;background:#e4e6f0}.project-visual{position:relative;overflow:hidden}.project-image text{user-select:none}.project-art-label{z-index:1}.contact-inner{display:block}.contact-form button{min-height:42px}.contact-form .btn{margin-top:2px}.menu-item .demo-action{padding:7px 9px}.hero-art{perspective:900px}.portrait-shell{transform-style:preserve-3d}.project-card:focus-within{border-color:rgba(105,216,208,.6)}.project-card .demo-button{padding:5px 0}.study-card{will-change:transform}.nav-links a[aria-current="location"]{color:#fff}.section-head h2{max-width:700px}
     @media(max-width:650px){.menu-toggle{display:grid}.nav{position:relative}.nav-links{display:none;position:absolute;right:0;top:54px;flex-direction:column;align-items:stretch;gap:0;width:min(280px,calc(100vw - 32px));padding:9px;border:1px solid var(--line);border-radius:13px;background:rgba(13,16,24,.98);box-shadow:0 20px 55px rgba(0,0,0,.45)}.nav-links.open{display:flex}.nav-links>a:not(.nav-cta){display:block;padding:11px 12px}.nav-links .nav-cta{margin-top:5px;justify-content:center}.project-visual{aspect-ratio:1.45}.hero-meta{font-size:9px}.contact-details{display:grid;gap:9px}}
-  </style>
+  
+    /* Accessibility: distinguish text links without relying on color and enlarge small controls. */
+    a:not(.btn):not(.nav-cta):not(.brand){text-decoration:underline;text-decoration-color:rgba(169,154,255,.58);text-underline-offset:.2em;text-decoration-thickness:.08em}
+    .btn,.nav-cta,.demo-button,.filter,.close,.demo-action,.faq-list button,.menu-toggle{min-height:44px}
+    .demo-button{display:inline-flex;align-items:center}
+    .close{width:44px;height:44px;padding:0}
+</style>
 
   <script type="application/ld+json">{
     "@context": "https://schema.org",
