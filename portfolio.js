@@ -1,4 +1,4 @@
-const phrases=['feel useful.','work better.','stay human.'];let phrase=0;const typed=document.querySelector('#typed');setInterval(()=>{phrase=(phrase+1)%phrases.length;typed.animate([{opacity:1},{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:600});setTimeout(()=>typed.textContent=phrases[phrase],260)},3600);
+const phrases=['feel useful.','work better.','stay human.'];let phrase=0;const typed=document.querySelector('#typed');const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;if(typed&&!reduceMotion)setInterval(()=>{phrase=(phrase+1)%phrases.length;typed.animate([{opacity:1},{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:600});setTimeout(()=>typed.textContent=phrases[phrase],260)},3600);
 const progress=document.querySelector('#progress');addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%'});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.section-head,.project,.about-mark,.about-copy,.about-side,.tool,.contact-panel').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
 const menu=document.querySelector('#menuToggle'),nav=document.querySelector('#nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
@@ -23,3 +23,32 @@ guideLaunch?.addEventListener('click',()=>setGuide(guidePanel.hidden));guideClos
 document.querySelectorAll('.guide-questions button').forEach(button=>button.addEventListener('click',()=>{const question=document.createElement('p');question.className='guide-bubble guide-user';question.textContent=button.textContent;const answer=document.createElement('p');answer.className='guide-bubble';answer.innerHTML=guideAnswers[button.dataset.question];guideMessages.append(question,answer);guideMessages.scrollTop=guideMessages.scrollHeight}));
 
 document.querySelectorAll('.flag-card,.work-subhead,.workflow-grid article').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
+
+
+// A low-amplitude pointer response gives the hero portrait depth on desktop;
+// it stays off on touch screens and for visitors who prefer reduced motion.
+const heroStage=document.querySelector('.portrait-stage');
+if(heroStage&&!reduceMotion&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+ let pointerFrame=0;
+ heroStage.addEventListener('pointermove',event=>{
+  if(pointerFrame)return;
+  pointerFrame=requestAnimationFrame(()=>{
+   pointerFrame=0;
+   const box=heroStage.getBoundingClientRect();
+   const x=(event.clientX-box.left)/box.width-.5;
+   const y=(event.clientY-box.top)/box.height-.5;
+   heroStage.style.setProperty('--portrait-shift-x',`${(x*8).toFixed(2)}px`);
+   heroStage.style.setProperty('--portrait-shift-y',`${(y*7).toFixed(2)}px`);
+   heroStage.style.setProperty('--portrait-rotate-x',`${(-y*2.2).toFixed(2)}deg`);
+   heroStage.style.setProperty('--portrait-rotate-y',`${(x*2.8).toFixed(2)}deg`);
+   heroStage.classList.add('has-pointer');
+  });
+ });
+ heroStage.addEventListener('pointerleave',()=>{
+  heroStage.classList.remove('has-pointer');
+  heroStage.style.setProperty('--portrait-shift-x','0px');
+  heroStage.style.setProperty('--portrait-shift-y','0px');
+  heroStage.style.setProperty('--portrait-rotate-x','0deg');
+  heroStage.style.setProperty('--portrait-rotate-y','0deg');
+ });
+}
