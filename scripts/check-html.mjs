@@ -12,11 +12,11 @@ const description = html.match(/<meta\s+name=["']description["']\s+content=["'](
 ok(description.length > 0 && description.length < 155, "page description is present and under 155 characters");
 ok((html.match(/<link\s+rel=["']canonical["']/gi) || []).length === 1, "one canonical URL exists");
 ok(!/name=["']keywords["']/i.test(html), "obsolete meta keywords tag is absent");
-const images = [...html.matchAll(/<img\\b[^>]*>/gi)].map(([tag]) => tag);
-const prioritizedImages = images.filter((tag) => /\\bfetchpriority=["']high["']/i.test(tag));
-ok(prioritizedImages.length === 1 && /\\bloading=["']eager["']/i.test(prioritizedImages[0]), "only the hero image loads eagerly with high priority");
-ok(images.filter((tag) => !prioritizedImages.includes(tag)).every((tag) => /\\bloading=["']lazy["']/i.test(tag)), "all non-hero images lazy-load");
-ok(/rel=["']preload["']\\s+as=["']style["']/i.test(html) && /media=["']print["']\\s+onload=["']this\\.media='all'["']/i.test(html), "external web fonts load without blocking first paint");
+const images = [...html.matchAll(/<img\b[^>]*>/gi)].map(([tag]) => tag);
+const prioritizedImages = images.filter((tag) => /\bfetchpriority=["']high["']/i.test(tag));
+ok(prioritizedImages.length === 1 && /\bloading=["']eager["']/i.test(prioritizedImages[0]), "only the hero image loads eagerly with high priority");
+ok(images.filter((tag) => !prioritizedImages.includes(tag)).every((tag) => /\bloading=["']lazy["']/i.test(tag)), "all non-hero images lazy-load");
+ok(/rel=["']preload["']\s+as=["']style["']/i.test(html) && /media=["']print["']\s+onload=["']this\.media='all'["']/i.test(html), "external web fonts load without blocking first paint");
 ok(!/href=["']#["']/.test(html), "no empty placeholder links remain");
 
 const markup = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
