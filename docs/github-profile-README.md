@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/og-index.png" alt="Umar Ilyas — web development and AI workflow prototypes" width="960"></p>
+<p align="center"><img src="https://umarilyas803-hub.github.io/assets/og-index.png" alt="Umar Ilyas — web development and AI workflow prototypes" width="960"></p>
 
 # Umar Ilyas
 
@@ -20,7 +20,7 @@ I build responsive websites, business dashboard interfaces and practical workflo
 
 The portfolio also includes [Ember Café](https://umarilyas803-hub.github.io/cafe.html), [Rift & Route](https://umarilyas803-hub.github.io/travel.html), [ClearHome](https://umarilyas803-hub.github.io/service.html) and [Atlas Helpdesk](https://umarilyas803-hub.github.io/agent.html).
 
-**Project status:** This repository hosts the static portfolio and browser demos. Product studies use fictional brands and sample data. They are not deployed client systems. The Restaurant AI and SportsHub backend projects are described in their case studies; their backend source is not included in this repository. Live integrations require separate setup and verification.
+**Project status:** My portfolio hosts static case studies and browser demos. Product studies use fictional brands and sample data. They are not deployed client systems. The Restaurant AI and SportsHub backend projects are described in their case studies; their backend source is separate from the portfolio repository. Live integrations require separate setup and verification.
 
 ## Focus
 
@@ -29,29 +29,6 @@ The portfolio also includes [Ember Café](https://umarilyas803-hub.github.io/caf
 - Early AI and automation prototypes with explicit human review steps.
 - Learning through Python, APIs and practical projects.
 
-## Run locally
+## Let’s connect
 
-No package installation or framework build is required: this is a static HTML, CSS and JavaScript site.
-
-```sh
-python -m http.server 8000
-```
-
-Open `http://localhost:8000`. Run the repository checks with:
-
-```sh
-node scripts/check-html.mjs
-```
-
-## Repository guide
-
-- `index.html`, `portfolio.css`, `portfolio.js`: portfolio homepage and interactions.
-- `web-development.html`: service scope, project examples and FAQs.
-- Project HTML/JavaScript files: case studies and sample-data demos.
-- `assets/`: project visuals and social-sharing images.
-- `robots.txt`, `sitemap.xml`: discovery configuration.
-- `.github/workflows/ci.yml`: automated static checks.
-
-## Contact
-
-For project enquiries, [connect with me on LinkedIn](https://www.linkedin.com/in/umar-ilyas-700437268/) or use the [portfolio contact section](https://umarilyas803-hub.github.io/#contact). A useful brief includes the users, current process, desired outcome and timeline.
+[LinkedIn](https://www.linkedin.com/in/umar-ilyas-700437268/) · [Portfolio](https://umarilyas803-hub.github.io/) · [Project enquiries](https://umarilyas803-hub.github.io/#contact)
