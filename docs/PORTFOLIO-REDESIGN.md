@@ -33,13 +33,23 @@ node scripts/check-feedback.mjs
 
 The checks cover metadata, local links and fragment targets, duplicate IDs, JSON-LD validity, JavaScript syntax, public review privacy, invalid review handling and safe mailto encoding. GitHub Actions runs the same checks.
 
-Browser visual and interaction QA could not run in the editing environment because no browser executable was available. Desktop/mobile visual approval, full demo regression and measured Core Web Vitals remain release checks. No Lighthouse score is claimed.
+Chromium browser checks passed at 320, 390, 768 and 1440 pixels across 13 content pages. Verified no horizontal document overflow, broken images or browser JavaScript errors. Reviewed homepage, reviews and provider dashboard screenshots. Tested review and enquiry email preparation, the mobile menu, pause-motion control and key actions in all nine project demos. No measured Core Web Vitals or Lighthouse score is claimed.
+
+The reproducible browser script is `scripts/check-browser.cjs`. It requires Playwright. Set `BROWSER_EXECUTABLE_PATH` if using an existing Chromium executable; optionally set `QA_SCREENSHOTS` to an existing output directory. The script starts its own local static server.
 
 ## Release and follow-up
 
-1. Review the branch and rendered desktop/mobile pages, particularly navigation, long headlines and project demo layouts.
+1. Review the rendered desktop/mobile pages, particularly navigation, long headlines and project demo layouts.
 2. Confirm every project interaction still matches its documented scope.
-3. Try review and enquiry handoffs with an email app; confirm that no success message implies automatic delivery.
+3. Try the final send step with an actual email app; browser checks verify preparation only. No success message implies automatic delivery.
 4. Merge only after visual approval, then check GitHub Pages deployment.
 5. Inspect the sitemap and changed URLs in Search Console after release. Monitor indexing and real query/click data over time before making further search decisions.
 6. If durable private review storage and moderation are required, choose a backend and authentication model separately; do not publish secrets or emulate an admin login in client-side JavaScript.
+
+## Complete visual implementation
+
+The final pass replaces the old homepage hero and both flagship heroes, creates custom imagery for all nine project scenes, adds visual service cards and a dedicated search-visibility page, applies consistent navigation and footers, and introduces pausable motion. `docs/DESIGN-ASSETS.md` records the asset briefs. Social previews, responsive image variants and the image sitemap are included. The visual approach follows the chosen design boards while retaining real project scope and existing working demo controls.
+
+## Accessibility pass
+
+Axe checks for WCAG 2 A/AA rules were run on all 13 content pages. Observed contrast failures in muted text/status palettes were corrected, the chart-range selector was labelled and breadcrumb links were underlined. The final automated run reported no violations for the checked rules. This is an automated check, not a certification or a substitute for assistive-technology testing.
