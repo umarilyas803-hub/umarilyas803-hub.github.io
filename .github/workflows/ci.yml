@@ -14,3 +14,7 @@ jobs:
           node-version: 22
       - name: Check HTML metadata, links, and embedded scripts
         run: node scripts/check-html.mjs
+      - name: Check all pages and feedback flow
+        run: |
+          node scripts/check-site.mjs
+          node scripts/check-feedback.mjs

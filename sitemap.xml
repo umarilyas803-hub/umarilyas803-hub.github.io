@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://umarilyas803-hub.github.io/</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/restaurant-ai.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/sportshub.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/cafe.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/travel.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/service.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/agent.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/panelpilot.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/staywise.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/parcelpilot.html</loc></url>
-  <url><loc>https://umarilyas803-hub.github.io/web-development.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://umarilyas803-hub.github.io/</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/web-development.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/reviews.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/search-visibility.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/search-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/restaurant-ai.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/restaurant-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/sportshub.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/sports-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/cafe.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/cafe-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/travel.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/travel-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/service.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/home-service-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/agent.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/support-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/panelpilot.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/provider-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/staywise.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hotel-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/parcelpilot.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/fulfilment-1280.webp</image:loc></image:image></url>
 </urlset>
