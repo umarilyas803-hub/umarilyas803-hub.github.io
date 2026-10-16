@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://umarilyas803-hub.github.io/</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/product-presentation.webp</image:loc></image:image></url>
   <url><loc>https://umarilyas803-hub.github.io/web-development.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
   <url><loc>https://umarilyas803-hub.github.io/reviews.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hero-1280.webp</image:loc></image:image></url>
   <url><loc>https://umarilyas803-hub.github.io/search-visibility.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/search-1280.webp</image:loc></image:image></url>
@@ -13,4 +13,6 @@
   <url><loc>https://umarilyas803-hub.github.io/panelpilot.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/provider-1280.webp</image:loc></image:image></url>
   <url><loc>https://umarilyas803-hub.github.io/staywise.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/hotel-1280.webp</image:loc></image:image></url>
   <url><loc>https://umarilyas803-hub.github.io/parcelpilot.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/fulfilment-1280.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/clinic-desk.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/clinic-preview.webp</image:loc></image:image></url>
+  <url><loc>https://umarilyas803-hub.github.io/aurelia-house.html</loc><image:image><image:loc>https://umarilyas803-hub.github.io/assets/aurelia-hero-1280.webp</image:loc></image:image></url>
 </urlset>
