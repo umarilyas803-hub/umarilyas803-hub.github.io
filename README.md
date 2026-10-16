@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/og-index.png" alt="Umar Ilyas — web development and AI workflow prototypes" width="960"></p>
+<p align="center"><img src="assets/share-index-next.jpg" alt="Umar Ilyas — web development and AI workflow prototypes" width="960"></p>
 
 # Umar Ilyas
 
@@ -12,6 +12,8 @@ I build responsive websites, business dashboard interfaces and practical workflo
 
 | Project | Explore | What it demonstrates |
 | --- | --- | --- |
+| Clinic Desk | [Case study & walkthrough](https://umarilyas803-hub.github.io/clinic-desk.html) | Offline PHP/SQLite visit, payment and print workflow; fictional browser walkthrough |
+| Aurelia House | [Case study & walkthrough](https://umarilyas803-hub.github.io/aurelia-house.html) | Bilingual hospitality project with guest and operations scope; sample booking flow |
 | Restaurant AI | [Case study & demo](https://umarilyas803-hub.github.io/restaurant-ai.html) | Text/voice ordering concept, staff review and operations dashboard |
 | SportsHub | [Case study & demo](https://umarilyas803-hub.github.io/sportshub.html) | Sports events, player applications and organizer workflows |
 | Staywise | [Interactive study](https://umarilyas803-hub.github.io/staywise.html) | Hotel booking requests and a sample front-desk view |
@@ -20,7 +22,7 @@ I build responsive websites, business dashboard interfaces and practical workflo
 
 The portfolio also includes [Ember Café](https://umarilyas803-hub.github.io/cafe.html), [Rift & Route](https://umarilyas803-hub.github.io/travel.html), [ClearHome](https://umarilyas803-hub.github.io/service.html) and [Atlas Helpdesk](https://umarilyas803-hub.github.io/agent.html).
 
-**Project status:** This repository hosts the static portfolio and browser demos. Product studies use fictional brands and sample data. They are not deployed client systems. The Restaurant AI and SportsHub backend projects are described in their case studies; their backend source is not included in this repository. Live integrations require separate setup and verification.
+**Project status:** This repository hosts the static portfolio and browser demos. Product studies use fictional brands and sample data. They are not deployed client systems. The Restaurant AI and SportsHub backend projects are described in their case studies; their backend source is not included in this repository. The original Clinic Desk PHP/SQLite application and private Aurelia House Cloudflare/D1 workspace remain separate from the public browser walkthroughs. Live integrations require separate setup and verification.
 
 ## Focus
 
@@ -41,11 +43,17 @@ Open `http://localhost:8000`. Run the repository checks with:
 
 ```sh
 node scripts/check-html.mjs
+node scripts/check-site.mjs
+node scripts/check-feedback.mjs
 ```
 
 ## Repository guide
 
-- `index.html`, `portfolio.css`, `portfolio.js`: portfolio homepage and interactions.
+- `index.html`, `portfolio.css`, `studio.css`, `experience.css`, `portfolio-next.css`: homepage and shared design.
+- `experience.js`, `product-showcase.js`: navigation, motion, toolkit filters and message preparation.
+- `clinic-desk.html`, `aurelia-house.html`, `project-walkthroughs.js`: new project case studies and fictional browser walkthroughs.
+- `reviews.html`, `reviews.json`, `feedback.js`: consented client feedback and email preparation.
+- `search-visibility.html`: SEO/AEO/GEO scope and useful explanations.
 - `web-development.html`: service scope, project examples and FAQs.
 - Project HTML/JavaScript files: case studies and sample-data demos.
 - `assets/`: project visuals and social-sharing images.

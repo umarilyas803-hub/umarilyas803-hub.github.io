@@ -49,3 +49,7 @@ if (reviewContainer) {
     reviewContainer.textContent = 'Reviews could not be loaded. Please try again later.';
   });
 }
+
+// A visual response to the visitor’s own selection, not a fabricated rating.
+const ratingInputs=[...document.querySelectorAll('#review-form input[name="rating"]')];
+ratingInputs.forEach(input=>input.addEventListener('change',()=>{ratingInputs.forEach(other=>other.closest('label').classList.toggle('rating-on',Number(other.value)<=Number(input.value)));}));
